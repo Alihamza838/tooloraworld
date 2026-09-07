@@ -1,0 +1,8 @@
+{
+  "name": "Toolora",
+  "description": "Toolora — Free, on-device privacy-first productivity suite. Edit PDFs, convert images, build resumes, generate mockups, and convert units locally in your browser with zero server uploads.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
