@@ -49,6 +49,8 @@ import { JsonLdHead } from './seo/JsonLdHead';
 import CookieBanner from './CookieBanner';
 import confetti from 'canvas-confetti';
 import HomeRecommendedArticles from './home/HomeRecommendedArticles';
+import HomePerformanceInfographic from './home/HomePerformanceInfographic';
+import HomeSeoKeywordsBanner from './home/HomeSeoKeywordsBanner';
 
 export default function Layout() {
   const location = useLocation();
@@ -666,6 +668,9 @@ export default function Layout() {
               {/* WORLD-CLASS DEDICATED 3D MOCKUP STUDIO SHOWCASE SECTION */}
               <MockupStudioBanner />
 
+              {/* REAL-TIME PERFORMANCE & ZERO-UPLOAD BENCHMARKS INFOGRAPHIC GRAPH */}
+              <HomePerformanceInfographic />
+
               {/* RECOMMENDED IN-DEPTH GUIDES WITH VISUAL SEPARATOR */}
               <HomeRecommendedArticles />
 
@@ -677,7 +682,13 @@ export default function Layout() {
 
       {/* 2.5 WORLD-CLASS FAQ SECTION (10 TOP RANKING KEYWORDS & RICH SNIPPETS) - Main Page Only */}
       {!activeToolId && !showBlog && !showAbout && !showContact && !showPrivacy && !showTerms && (
-        <FaqSection />
+        <>
+          <FaqSection />
+          {/* HIGH-IMPACT SEO KEYWORDS FLEX BANNER & DIRECTORY RIGHT ABOVE FOOTER */}
+          <div className="max-w-[1270px] w-full mx-auto px-3 sm:px-4">
+            <HomeSeoKeywordsBanner />
+          </div>
+        </>
       )}
 
       {/* 3. TOOLMANY SITE FOOTER */}
