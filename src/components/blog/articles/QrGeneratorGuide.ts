@@ -4,7 +4,7 @@ import { IMG } from "../utils";
 
 const QrGeneratorGuide: BlogPost = {
   id: "free-qr-code-generator-online-vector-wifi-vcard",
-  title: "Free QR Code Generator Online — Custom Colors, Logos, WiFi & Vector SVG/PNG (2026)",
+  title: "Free QR Code Generator Online Custom Colors, Logos, WiFi & Vector SVG/PNG (2026)",
   slug: "free-qr-code-generator-online-wifi-vcard-vector",
   excerpt: "Generate high-density, error-corrected QR codes for website URLs, WiFi network access, vCard contacts, email drafts, and payment links. Export crisp vector SVG and high-res PNGs.",
   date: "June 10, 2026",

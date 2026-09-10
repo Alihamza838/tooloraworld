@@ -328,7 +328,7 @@ async function startServer() {
 
     const pkg = generateSEOPackage(
       {
-        title: `${tool.name} — Free In-Browser Zero-Upload Tool`,
+        title: `${tool.name} Free In-Browser Zero-Upload Tool`,
         description: tool.description,
         tags: [tool.category, 'client-side', 'zero-upload', 'privacy-first', 'webassembly'],
         category: tool.category,

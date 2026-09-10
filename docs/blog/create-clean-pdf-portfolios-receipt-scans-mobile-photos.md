@@ -31,6 +31,38 @@ Converting loose phone photos into unified PDFs simplifies everyday workflows:
 
 Toolora automatically detects whether each photograph is landscape or portrait and orients the corresponding PDF page to match, preventing awkward black borders or cropped corners.
 
+## Assembling Archival Document Packets: Thresholding, Perspective Correction & Batching
+
+Transforming casual smartphone photos of physical documents into clean, professional, print-ready digital scans requires specialized image processing techniques:
+
+1. Perspective Rectification & Quad Warping: Photos taken with smartphones rarely feature perfectly perpendicular angles. Physical papers exhibit keystoning distortion, perspective slant, and curled corners. Applying four-point planar homography transforms projects the skewed quadrilateral boundary back into a true rectangular geometry.
+2. Adaptive Binarization & Shadow Removal: Ambient room lighting creates uneven gradients, shadows from the photographer's hand, and yellow page tints. Adaptive thresholding algorithms analyze local pixel neighborhoods, removing ambient shadows while boosting ink contrast to produce crisp black text on pure white backgrounds.
+3. Sequential Multi-Page Batching: Users can drop dozens of photo files into the workspace, drag-and-drop to reorder pages, adjust individual orientations, and compile the entire series into a unified, coherent multi-page PDF.
+
+## Legal Audits, Insurance Claims & Archival Longevity (PDF/A Standards)
+
+Standardized digital scan packets are critical across legal, medical, and insurance claims workflows:
+
+* Insurance Claims Documentation: Accident scene photos, repair estimates, and medical receipts must be combined into a structured, chronological PDF packet for insurance adjuster review.
+* Archival Longevity (ISO 19005 PDF/A): Scanned legal contracts and historical records must remain readable decades into the future. Compiling scans into standards-compliant PDFs ensures universal compatibility across all operating systems and long-term archival repositories.
+* Eliminating Software Bloat: Avoid installing proprietary desktop scanner utilities laden with background telemetry and subscription paywalls. Toolora delivers enterprise-grade scanning tools directly in your browser.
+* Absolute Document Privacy: Legal evidence and confidential insurance claims must remain private. Toolora processes all image analysis and PDF compilation locally on your device with zero cloud exposure.
+
+## Ink Stroke Recovery, Contrast Enhancement & Mobile Document Capture
+
+Capturing clear digital scans using mobile devices in suboptimal ambient lighting requires intentional contrast calibration:
+
+1. Faded Ink Recovery: Documents written in light ballpoint ink or printed from low-toner office cartridges often appear washed out. Toolora's contrast enhancement applies high-pass sharpening filters that amplify character strokes while suppressing paper grain.
+2. Removing Hand Shadows & Page Wrinkles: By calculating morphological background approximations, the browser engine subtracts localized illumination drops caused by overhead indoor lighting or phone shadows.
+3. Clean Paperwork Archiving: Produce compact, crystal-clear PDFs suitable for university admissions, mortgage underwriting, and legal discovery.
+4. Guaranteed Device Privacy: Processing health insurance forms, bank statements, and identity documents locally guarantees zero data leakage.
+
+4. Binarization Algorithms & Morphological Cleaning: When converting smartphone photos of contracts or whiteboards into scans, Toolora applies Otsu thresholding and morphological opening operations. These mathematical filters remove speckled noise, erase background paper bleed-through from double-sided sheets, and render crisp, high-contrast black typography on pure white backgrounds.
+
+5. Multi-Page PDF/A Archival Packaging: Scanned document packets can be compiled into ISO 19005-compliant PDF/A files, guaranteeing that digital loan applications, receipts, and court filings remain permanently readable across all future operating systems and archival software.
+
+6. Sovereign Local Processing: Because medical records, personal identity papers, and financial receipts contain sensitive private data, Toolora performs all perspective warping and image processing locally in your browser with zero network exposure.
+
 
 ## Frequently Asked Questions
 ### Can I convert photos taken from my iPhone or Android phone?

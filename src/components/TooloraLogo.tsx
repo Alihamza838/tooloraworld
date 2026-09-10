@@ -103,9 +103,6 @@ export default function TooloraLogo({ className = '', iconOnly = false, size = '
             </span>
             <span className="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse" />
           </div>
-          <span className="text-[9px] font-extrabold text-slate-500 dark:text-zinc-400 uppercase tracking-wider font-mono select-none leading-none mt-0.5">
-            100% On-Device
-          </span>
         </div>
       )}
     </div>

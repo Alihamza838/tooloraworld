@@ -101,7 +101,10 @@ export default function Layout() {
 
   // Sync state with URL path
   useEffect(() => {
-    const path = location.pathname;
+    const rawPath = location.pathname;
+    // Normalize trailing slash (e.g. /about/ -> /about) except for root "/"
+    const path = rawPath.length > 1 && rawPath.endsWith('/') ? rawPath.slice(0, -1) : rawPath;
+
     if (path === '/about') {
       setShowAbout(true);
       setShowContact(false);

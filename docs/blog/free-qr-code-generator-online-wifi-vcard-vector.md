@@ -1,6 +1,6 @@
 ---
 id: "free-qr-code-generator-online-vector-wifi-vcard"
-title: "Free QR Code Generator Online — Custom Colors, Logos, WiFi & Vector SVG/PNG (2026)"
+title: "Free QR Code Generator Online Custom Colors, Logos, WiFi & Vector SVG/PNG (2026)"
 slug: "free-qr-code-generator-online-wifi-vcard-vector"
 category: "Productivity"
 readTime: "14 min read"
@@ -12,7 +12,7 @@ markdownTwin: "https://toolora.world/blog/free-qr-code-generator-online-wifi-vca
 toolId: "qr-generator"
 ---
 
-# Free QR Code Generator Online — Custom Colors, Logos, WiFi & Vector SVG/PNG (2026)
+# Free QR Code Generator Online Custom Colors, Logos, WiFi & Vector SVG/PNG (2026)
 
 *Published on June 10, 2026 | 14 min read | Author: Ali Hamza*
 

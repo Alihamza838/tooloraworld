@@ -59,12 +59,18 @@ export default function BlogSection() {
 
   // Sync active article from pathname if user navigated directly or clicked back/forward
   useEffect(() => {
-    const path = location.pathname;
+    const rawPath = location.pathname;
+    const path = rawPath.length > 1 && rawPath.endsWith('/') ? rawPath.slice(0, -1) : rawPath;
+
     if (path.startsWith('/blog/') || path.startsWith('/guides/')) {
       const slugOrId = path.replace('/blog/', '').replace('/guides/', '').split('?')[0].trim();
       if (slugOrId && slugOrId !== 'all') {
         setActiveArticleId(slugOrId);
+      } else {
+        setActiveArticleId(null);
       }
+    } else if (path === '/blog' || path === '/guides') {
+      setActiveArticleId(null);
     }
   }, [location.pathname, setActiveArticleId]);
 

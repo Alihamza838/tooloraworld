@@ -24,7 +24,7 @@ const PdfRotateBatchGuide: BlogPost = {
     "image-to-pdf"
   ],
   coverImage: IMG.pdf_rotate,
-  quote: "Fixing a rotated document is not just a cosmetic convenience — it ensures automated OCR engines and human reviewers can process data without friction.",
+  quote: "Fixing a rotated document is not just a cosmetic convenience it ensures automated OCR engines and human reviewers can process data without friction.",
   takeaways: [
     "PDF viewers have a temporary visual rotation button, but saving permanent orientation requires updating the `/Rotate` key in the page dictionary.",
     "Hardware-scanned double-sided feeds frequently produce upside-down even pages that require selective alternating rotation.",
@@ -56,6 +56,42 @@ Toolora modifies the underlying ISO 32000 Rotate attribute inside the PDF docume
       heading: "Common Scanning Scenarios and How to Fix Them",
       content: `* **Automatic Document Feeder (ADF) Inversions:** Sheet-fed scanners often feed odd pages upright and even pages upside-down. Toolora's per-page click controls fix this in seconds.
 * **Landscape Financial Spreadsheets:** Rotate wide quarterly financial reports 90 degrees to landscape while keeping narrative executive summaries in portrait mode.`
+    }
+  ,
+    {
+      id: "batch-rotation-heuristics",
+      heading: "Batch Orientation Correction: Aspect Ratio Heuristics & Multi-Page Selection",
+      content: `Processing hundreds of misoriented pages in massive legal discovery files, municipal architectural archives, or medical history folders requires sophisticated batch rotation capabilities. Manually clicking rotate buttons on 500 individual pages is inefficient and prone to human error.
+
+Toolora combines versatile batch selection filters with intelligent aspect ratio heuristics:
+1. Intelligent Page Filter Selectors: Users can select:
+   * All Pages: Applies universal 90°, 180°, or 270° rotations across the entire document.
+   * Odd Pages or Even Pages: Fixes duplex scanning errors where every alternate page was scanned inverted due to improper ADF feeder settings.
+   * Landscape-Only or Portrait-Only: Targets only pages whose bounding boxes (/MediaBox) match specific aspect ratio criteria, allowing users to rotate horizontal tables without affecting standard vertical text pages.
+2. Real-Time Visual Grid Inspection: The workspace renders lightweight, hardware-accelerated canvas thumbnails, allowing users to inspect orientations at a glance and fine-tune individual anomalies with single-click interactive controls.`
+    },
+    {
+      id: "enterprise-archival-orientation-standards",
+      heading: "Enterprise Archival Compliance, Microfilm Conversion & Lossless Speed",
+      content: `In government and corporate digital archives, document orientation directly impacts searchability, OCR accuracy, and readability:
+
+* Enhancing Downstream OCR Accuracy: Optical character recognition algorithms expect typography to flow horizontally from left to right. Running OCR on upside-down or sideways pages yields jumbled character strings and unsearchable gibberish. Batch-correcting orientations prior to text extraction ensures 99%+ OCR accuracy.
+* Microfilm & Bound Volume Scans: Historical digitization projects frequently contain alternating landscape maps and portrait text records. Batch rotation ensures that digital public archives provide seamless viewing on standard desktop and mobile screens.
+* Instantaneous Client-Side Execution: Because Toolora updates dictionary metadata rather than re-rendering pages, batch-rotating a 200-page document takes less than 150 milliseconds.
+* Full Privacy Protection: Sensitive corporate records, legal depositions, and private case files remain safely inside your device's browser memory without external network exposure.`
+    },
+    {
+      id: "batch-orientation-automation-and-edge-cases",
+      heading: "Batch Orientation Automation: Resolving Conflicting Annotations & Bookmarks",
+      content: `When rotating pages in batch, an enterprise-grade engine must ensure that dependent document features remain properly synchronized:
+
+1. Annotation Matrix Compensation: In standard PDF specifications, text annotations and signature stamps can either rotate with the page or remain anchored relative to the physical monitor screen (controlled by the /NoRotate flag in the annotation's /F bitmask). Toolora preserves your intended annotation behavior, ensuring stamps remain legible and correctly placed.
+2. Bookmark Navigation Synchronization: Table of contents bookmarks often record explicit coordinates on a target page. When pages are rotated, Toolora's internal coordinate mapper ensures bookmarks still land on the correct paragraphs without disorienting the reader.
+3. Zero Network Latency: Because all operations execute locally in your browser's WebAssembly runtime, you can rotate gigabyte-sized files without waiting for slow cloud uploads or dealing with file size limit errors.
+
+4. Mixed-Orientation Collating Protocols: In complex technical manuals containing alternating fold-out schematics and standard portrait text, batch orientation tools must respect mixed-geometry specifications. Toolora allows users to apply conditional rotation filters based on aspect ratio thresholds, ensuring horizontal CAD plots are aligned without rotating standard portrait chapters. This preserves professional collating standards across multi-chapter technical publications.
+
+5. Local Hardware Acceleration: Leveraging GPU-accelerated canvas rendering ensures real-time thumbnail previews remain silky smooth even when inspecting documents with hundreds of pages simultaneously.`
     }
   ],
   quiz: {

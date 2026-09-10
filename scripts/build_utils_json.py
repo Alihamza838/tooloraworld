@@ -50,9 +50,9 @@ reg(
     }
 )
 
-# 2. UnitConverterEngineeringGuide.ts
+# 2. UnitConverterMetricImperialGuide.ts
 reg(
-    'UnitConverterEngineeringGuide.ts',
+    'UnitConverterMetricImperialGuide.ts',
     {
         'id': 'engineering-thermodynamics-and-fluid-dynamics',
         'heading': 'Advanced Engineering Metrology: Thermodynamics, Viscosity, Stress & Torque',
@@ -90,133 +90,117 @@ reg(
     }
 )
 
-# 3. JsonFormatterGuide.ts
+# 3. CurrencyConverterGuide.ts
 reg(
-    'JsonFormatterGuide.ts',
+    'CurrencyConverterGuide.ts',
     {
-        'id': 'json-grammar-and-ecma-404-specification',
-        'heading': 'Formal Syntax & Grammar: ECMA-404, RFC 8259 & Abstract Syntax Tree (AST) Parsing',
-        'content': """JavaScript Object Notation (JSON) is the universal data interchange format of modern computing, formally standardized under ECMA-404 and IETF RFC 8259. Despite its widespread adoption, JSON enforces an unforgiving, strict formal grammar. A single stray trailing comma, unescaped control character, or single-quoted string causes native JSON.parse() methods to throw fatal syntax exceptions.
+        'id': 'forex-market-mechanics-and-interbank-liquidity',
+        'heading': 'Forex Market Structure: Interbank Rates, Bid-Ask Spreads & Central Bank Benchmarks',
+        'content': """The global foreign exchange (Forex or FX) market is the largest and most liquid financial market in the world, facilitating over $7.5 trillion in daily trading volume. Unlike equities or commodity exchanges, the FX market operates without a centralized physical trading floor, functioning instead as a decentralized Over-The-Counter (OTC) network of international banks, institutional market makers, and sovereign central reserves.
 
-1. Strict JSON Syntactic Invariants:
-   * String Enclosure: All object keys and string values MUST be enclosed in double quotation marks ("key": "value"). Single quotes ('key': 'value') are strictly invalid.
-   * Trailing Commas Prohibited: Trailing commas following the final element in an array [1, 2, 3,] or key-value pair {"a": 1,} are forbidden by RFC 8259.
-   * Primitive Data Types: JSON supports only six primitive structures: string, number, boolean (true/false), null, array, and object. NaN, Infinity, and undefined cannot be represented.
-2. Abstract Syntax Tree (AST) Tokenization: Toolora's formatting engine parses raw text into a recursive Abstract Syntax Tree. This allows the engine to isolate exact character offsets of syntax errors, displaying line and column numbers where a missing brace or unescaped quote broke the document."""
+1. The True Anatomy of the Mid-Market Rate: The mid-market exchange rate (also known as the interbank spot rate) represents the exact mathematical midpoint between wholesale buy (bid) and sell (ask) prices established by tier-one multinational financial institutions. Wholesale interbank spreads for major currency pairs (such as EUR/USD or USD/JPY) fluctuate by mere fractions of a basis point (pips).
+2. The Retail Bank Markup Discrepancy: When individual consumers or small businesses convert currencies through retail commercial banks, wire services, or credit card networks, financial intermediaries rarely offer the true mid-market rate. Instead, retail institutions silently append hidden markups ranging between 1.5% and 4.5% onto the spread, pocketing substantial trading margins while advertising misleading 'zero fee' promotions.
+3. Sovereign Benchmark Aggregation: Toolora aggregates live currency pricing directly against official central bank publication schedules—including the European Central Bank (ECB), US Federal Reserve, Bank of England (BoE), and Bank of Japan (BoJ)—providing transparent rate baselines for global commerce."""
     },
     {
-        'id': 'devops-and-enterprise-api-integration',
-        'heading': 'DevOps & Enterprise Integration: Slashing Bandwidth with Minification vs Prettification',
-        'content': """Balancing human readability against machine network transmission efficiency:
+        'id': 'triangular-cross-rate-matrix-calculation',
+        'heading': 'Triangular Arbitrage & Cross-Rate Computation Matrix: Algorithmic Rate Precision',
+        'content': """Calculating cross-currency rates across non-dollar pairs requires precise algorithmic triangular modeling:
 
-* Prettification (Indentation & Visual Hierarchy): For API debugging, log inspection, and developer documentation, formatting minified single-line JSON payloads with 2-space or 4-space indentation reveals nested object hierarchies and array relationships instantly.
-* Minification (Bandwidth & Serialization Speed): Whitespace characters, carriage returns, and indentation tabs consume valuable bytes. In production API pipelines and Redis caching layers, stripping unnecessary whitespace (minification) reduces payload weight by 20% to 40%, cutting cloud networking egress costs and accelerating JSON serialization throughput.
-* Tree-View Interactive Navigation: Collapsible object nodes allow software engineers to navigate multi-megabyte API response payloads without scrolling through thousands of lines of raw text.
-* Zero-Knowledge Privacy for Sensitive Data: Production database dumps, customer records, and API tokens must NEVER be pasted into unverified online formatters. Toolora parses and formats JSON 100% locally in browser RAM with zero network traffic."""
+* Direct vs Indirect Currency Quotations: Direct quotations express the cost of one unit of foreign currency in domestic currency terms (e.g., $1.08 USD per 1 EUR). Indirect quotations represent the number of foreign currency units required to purchase one unit of domestic currency (e.g., 152.40 JPY per 1 USD).
+* Algorithmic Triangular Cross-Rate Synthesis: While global trading volume is concentrated in the US Dollar (USD), real-world commerce frequently requires conversions between minor or exotic currency pairs (e.g., converting Swiss Francs to New Zealand Dollars, CHF/NZD). Toolora's calculation engine applies triangular matrix mathematics:
+  $$\text{Rate}_{\text{CHF/NZD}} = \frac{\text{Rate}_{\text{USD/NZD}}}{\text{Rate}_{\text{USD/CHF}}}$$
+* Eliminating Synthetic Compounded Slippage: In naive retail banking, converting between two non-reserve currencies incurs two distinct retail conversion penalties. Toolora's mathematical synthesis delivers pure mid-market benchmark parity.
+* Protecting Financial Confidentiality in Browser RAM: Exchanging large corporate wire amounts or budgeting private personal net worth transactions carries significant privacy risks when exposed to predatory financial tracker cookies. Toolora executes all currency calculations locally in browser memory with zero tracking."""
     },
     {
-        'id': 'json-validation-and-developer-workflows',
-        'heading': 'Developer Productivity: Syntax Highlighting, Schema Validation & Instant Export',
-        'content': """Streamlining daily engineering and debugging operations:
+        'id': 'offline-caching-and-multi-currency-budgeting',
+        'heading': 'Global Travel & Remote Enterprise: Offline Rate Caching, Bi-Directional Swapping & Invoicing',
+        'content': """Empowering digital nomads, international travelers, and cross-border businesses with instant currency intelligence:
 
-1. Color-Coded Syntax Highlighting: Distinct visual coloring for keys (blue), string values (green), numbers (orange), booleans (purple), and null values (red) accelerates optical scanning of complex responses.
-2. Instant Minify / Beautify Toggles: Switch between compressed production payload format and formatted readable layout with a single keystroke.
-3. One-Click Copy & Clean File Download: Copy clean JSON to your system clipboard or export directly as a .json file.
-4. JSON Schema Draft-07 Validation: Validate incoming data structures against formal JSON Schema definitions to verify required fields, type constraints, and string regex patterns before pushing to production databases.
-5. Large File Memory Buffering: Efficiently format multi-megabyte payload logs from server monitoring systems (DataDog, Splunk, ElasticSearch) without freezing browser tabs.
-6. Automated Bracket and Quote Repair: Identify common developer typos such as unquoted property names or misplaced commas and repair them intelligently.
-7. Total Client Data Security: Sanitize, inspect, and format sensitive database payloads, production configuration files, and internal API keys safely inside your browser's private memory sandbox with zero risk of external data leakage."""
+1. Offline Travel Rate Persistence: When traveling internationally without expensive roaming cellular data or in-flight Wi-Fi, Toolora automatically retains the most recent synchronized forex rates in client-side localStorage. Travelers can instantly calculate street market purchases, taxi fares, and hotel bills in remote regions without network access.
+2. Instant Bi-Directional Keyboard Swapping: Toggle base and quote currencies instantaneously with a single click or keyboard shortcut, recalculating complex fractional values in milliseconds.
+3. Multi-Currency Freelance Invoicing Alignment: International contractors billing clients in foreign currencies can copy certified spot rates directly into invoices, establishing clear payment expectations and audit trails for annual tax reconciliation.
+4. Sovereign Local Security: Protect your proprietary business revenues, personal travel budgets, and international wire calculations safely within your browser's private memory sandbox."""
     }
 )
 
-# 4. JsonFormatterApiDebuggingGuide.ts
+# 4. CurrencyConverterTravelFinanceGuide.ts
 reg(
-    'JsonFormatterApiDebuggingGuide.ts',
+    'CurrencyConverterTravelFinanceGuide.ts',
     {
-        'id': 'rest-graphql-json-payload-debugging',
-        'heading': 'API Payload Forensics: Debugging REST, GraphQL, Microservices & Webhook Payloads',
-        'content': """Modern distributed software architectures—spanning RESTful microservices, GraphQL federations, and asynchronous webhook pipelines—rely heavily on JSON as their primary transport envelope. When API endpoints return unexpected HTTP 400 Bad Request or HTTP 500 Internal Server errors, the root cause is almost invariably a subtle malformation in the JSON request or response payload.
+        'id': 'retail-bank-forex-markups-and-spreads',
+        'heading': 'Exposing Hidden Banking Costs: Foreign Transaction Fees, Spreads & Retail Markups',
+        'content': """Navigating global finance requires unmasking the opaque fees and markup spreads charged by international commercial banks, credit card payment networks, and money transfer operators. When spending or remitting capital across national borders, hidden costs frequently erode significant portions of your transaction value.
 
-1. Common API Serialization Pitfalls:
-   * Type Mismatch Errors (Numbers vs Strings): In loosely typed environments, a numeric identifier serialized as a string ("id": "1042") instead of an integer ("id": 1042) causes strict backend ORMs (such as Prisma, Hibernate, or Go struct decoders) to reject the payload.
-   * Floating-Point Precision Loss in 64-Bit Integers: JavaScript represents all numbers as IEEE 754 double-precision floats, which lose integer precision beyond $2^{53} - 1$ (9,007,199,254,740,991). Large database primary keys (such as Twitter Snowflakes or BigInt IDs) must be serialized as strings to prevent bit truncation.
-   * Unescaped Special Characters: Raw newline characters (\n) or unescaped backslashes in user-submitted text cause JSON deserializers to crash immediately."""
+1. The Three Layers of International Card Transaction Costs:
+   * Network Exchange Markup: Visa and Mastercard publish daily wholesale currency exchange rates that sit within 0.2% to 0.5% of the interbank mid-market rate.
+   * Issuing Bank Foreign Transaction Surcharge: Most domestic retail bank credit and debit cards slap an arbitrary 1% to 3% 'foreign transaction fee' on every single transaction processed outside the cardholder's home country.
+   * Intermediary Wire Transfer Deductions: SWIFT wire transfers between international accounts regularly pass through correspondent intermediary banks, with each banking node shaving off an unannounced $15 to $30 handling fee.
+2. Airport Currency Exchange Kiosks: Airport kiosks, train station exchange booths, and tourist hotels capitalize on traveler vulnerability by inflating retail spreads by 8% to 15% above the true mid-market rate, compounding the markup with flat administrative commissions."""
     },
     {
-        'id': 'api-security-and-token-leak-prevention',
-        'heading': 'Preventing Credential Leaks: The Severe Security Risks of Public Online Formatters',
-        'content': """Protecting enterprise infrastructure from predatory online utility websites:
+        'id': 'dynamic-currency-conversion-dcc-scams',
+        'heading': 'The Dynamic Currency Conversion (DCC) Trap: ATM & Point-of-Sale Exploitation',
+        'content': """Protecting your bank account against the most prevalent point-of-sale financial trap in international travel:
 
-* The Hidden Danger of Cloud-Based JSON Formatters: Many popular online 'JSON formatters' log and store every pasted snippet on remote cloud servers. Software developers routinely paste raw curl outputs containing live Authorization Bearer JWT tokens, AWS access keys, Stripe secret API keys, and customer personally identifiable information (PII). Malicious operators scrape these databases to execute corporate data breaches and unauthorized API takeovers.
-* Ironclad Local Isolation with Toolora: Toolora processes 100% of JSON parsing, tree-node generation, and formatting locally within your browser's sandboxed memory. No network requests are dispatched, ensuring your confidential API tokens and customer database records remain completely secure.
-* Sanitizing JWT and Auth Payloads: Inspect decoded JWT headers and claims payloads safely without exposing cryptographic secrets to third parties.
-* Immediate Memory Erasure: Refreshing or closing the browser tab purges all parsed JSON structures from RAM instantly."""
+* How Dynamic Currency Conversion (DCC) Operates: When paying for dinner in Rome or withdrawing Japanese Yen from an ATM in Tokyo, modern point-of-sale (POS) terminals detect foreign cards and present a deceptive prompt: *'Would you like to be billed in your home currency ($ USD) or the local merchant currency (€ EUR / ¥ JPY)?'*
+* The Predatory Math of DCC: The terminal frames paying in your home currency as a helpful convenience. In reality, agreeing to DCC authorizes the foreign merchant's payment processor to apply an exorbitant proprietary exchange rate marked up by 5% to 10% above the interbank spot rate. Furthermore, your domestic credit card may still charge a foreign transaction fee because the merchant's merchant ID originates overseas.
+* The Golden Rule of International Card Spending: ALWAYS choose to be charged in the LOCAL foreign currency. Your domestic card issuer will convert the funds using wholesale network rates that are dramatically more favorable than merchant POS terminal markups.
+* Complete Privacy for Financial Audits: Keep your personal banking statements, wire calculations, and overseas business budgets completely private with Toolora's zero-cloud local conversion engine."""
     },
     {
-        'id': 'api-debugging-tools-and-diff-workflows',
-        'heading': 'Advanced API Debugging: Large Payload Handling, Sorting Keys & Structural Validation',
-        'content': """Mastering advanced JSON manipulation techniques for enterprise software engineering:
+        'id': 'freelance-international-hedging-and-wire-reconciliation',
+        'heading': 'Cross-Border Freelancing & Remote Work: Currency Hedging, Spot Contracts & Tax Prep',
+        'content': """Operational strategies for global agencies, digital nomads, and overseas independent contractors:
 
-1. Alphabetical Key Sorting: Normalizing JSON payloads by alphabetically sorting object keys allows developers to run accurate text diffs between expected and actual API responses, revealing subtle missing fields instantly.
-2. High-Performance Large Payload Parsing: Toolora handles massive multi-megabyte JSON payloads smoothly without freezing the browser interface, utilizing streaming Web Worker parsers.
-3. Path Expression Navigation: Easily pinpoint nested properties within complex JSON hierarchies for quick API contract verification.
-4. Asynchronous Webhook Inspection: Paste raw webhook notifications from Stripe, GitHub, or Twilio to verify digital HMAC signatures and payload schema integrity before triggering backend automation handlers.
-5. Header and Envelope Isolation: Effortlessly extract inner response envelopes from complex GraphQL responses ({ "data": { ... } }) or REST wrappers ({ "status": "success", "results": [ ... ] }).
-6. Deep Schema Comparison & Structural Diffing: Visually highlight missing nested keys, unexpected array index reorderings, and unexpected null values between staging and production environments.
-7. Total Sovereign Security: Debug production microservices, webhook payloads, customer telemetry logs, and database dumps with complete privacy and zero cloud risk."""
+1. Setting Clear Settlement Currencies in Client Master Services Agreements: Protect consulting revenues against localized currency depreciation by contractually stipulating hard settlement currencies (USD, EUR, GBP) or anchoring contracts to formal mid-market spot rate bands.
+2. Reconciling Value-Added Tax (VAT) and Gross Foreign Income: Tax authorities (such as the IRS, HMRC, and CRA) mandate that foreign currency income be translated into domestic currency at the exact historical exchange rate on the date funds were constructively received. Toolora provides transparent historical spot rate benchmarks for seamless Schedule C and corporate accounting audits.
+3. Real-Time Multi-Pair Rate Comparison: Effortlessly benchmark conversion rates across global banking platforms to choose the most cost-effective remittance corridor.
+4. Total Sovereign Data Privacy: Calculate your business revenues, contractor payouts, and corporate wire allocations entirely within client-side browser memory with zero risk of third-party financial tracking."""
     }
 )
 
-# 5. CaseConverterGuide.ts
+# 5. TextToolsGuide.ts
 reg(
-    'CaseConverterGuide.ts',
+    'TextToolsGuide.ts',
     {
-        'id': 'string-parsing-and-unicode-case-mapping',
-        'heading': 'Computational Linguistics: Unicode Case Mapping, Word Boundaries & Regex Tokenization',
-        'content': """String case conversion is a core text-processing operation that requires understanding computational linguistics, character encoding standards, and language-specific orthography. Transforming a phrase like 'user-authentication-service' into 'UserAuthenticationService' involves far more than simple uppercase and lowercase character substitution.
+        'id': 'unicode-metrics-and-grapheme-clusters',
+        'heading': 'Unicode Computational Linguistics: Grapheme Clusters, UTF-8 Encoding & Word Counts',
+        'content': """Text parsing and string manipulation in modern web applications require a sophisticated understanding of character encoding architectures, Unicode standards, and computational linguistics. Primitive string length properties in programming languages frequently miscalculate human-readable text due to variable-length character representations.
 
-1. Delimiter Detection & Word Boundary Tokenization: Case conversion engines must identify word boundaries across diverse delimiting schemes:
-   * Whitespace Delimiters: Spaces, tabs, carriage returns, and newlines.
-   * Punctuation Delimiters: Hyphens (-), underscores (_), periods (.), slashes (/), and colons (:).
-   * Casing Transitions: Recognizing transition boundaries where a lowercase letter is immediately followed by an uppercase letter (e.g., 'firstName' -> 'first', 'Name') using lookahead regex assertions: /(?<=[a-z])(?=[A-Z])/.
-2. The Complexities of International Unicode Case Folding: In English, mapping between 'a' and 'A' is straightforward. However, in international alphabets, case folding exhibits non-one-to-one relationships. For example, in German, the lowercase 'ß' (Eszett) uppercases to 'SS'. In Turkish, lowercase 'i' uppercases to dotted 'İ', while dotless 'ı' uppercases to 'I'. Toolora applies locale-aware string manipulation methods to preserve orthographic accuracy."""
+1. Grapheme Clusters vs UTF-16 Code Units: In JavaScript, standard string length methods (.length) count 16-bit code units rather than visual characters. Common emojis, modifier symbols, and non-Latin alphabets are composed of multiple surrogate pairs and zero-width joiners. For example, the technologist emoji '👩‍💻' consists of five distinct UTF-16 code units (woman + zero-width joiner + computer). A naive character counter reports a length of 5. Toolora utilizes the native internationalization standard Intl.Segmenter to compute authentic human-perceived grapheme clusters accurately.
+2. Word Boundary Detection Across International Scripts: While Latin-based languages rely on whitespace and punctuation to delimit word boundaries, East Asian scripts (such as Japanese, Chinese, and Thai) write sentences continuously without spaces. Toolora implements locale-sensitive tokenization algorithms to measure true word counts across global languages.
+3. Typographic Metrics & Reading Time Estimation: Calculates precise word, sentence, paragraph, and character metrics alongside standard reading speed formulas (200 words per minute for silent adult reading)."""
     },
     {
-        'id': 'content-creators-and-seo-copywriting',
-        'heading': 'Content Editorial Standards: AP Stylebook vs Chicago Manual for Title Casing',
-        'content': """Maintaining consistent typographic capitalization across digital publications and content marketing:
+        'id': 'text-cleaning-deduplication-and-slugification',
+        'heading': 'Data Sanitization & SEO Architecture: Line Deduplication, Whitespace Normalization & Slugs',
+        'content': """Transforming messy, unformatted text into production-ready data assets and search-optimized web paths:
 
-* The Rules of Formal Title Case: Novice writers often capitalize every single word in a headline, which looks jarring and amateurish. Formal editorial style guides (such as The Associated Press Stylebook and The Chicago Manual of Style) mandate lowercasing minor grammatical words:
-   * Short Prepositions: in, on, at, by, to, for, of, off, up.
-   * Coordinating Conjunctions: and, but, or, nor, yet, so.
-   * Articles: a, an, the.
-   * The first and last words of the title are ALWAYS capitalized, regardless of part of speech.
-* Search Engine Optimization (SEO) Headlines: Capitalizing search page title tags and YouTube video titles in polished Title Case boosts organic click-through rates by up to 14% compared to all-lowercase or unformatted text.
-* Sentence Case for Modern Product Design: Leading UX design systems (Apple Human Interface Guidelines, Google Material Design) mandate Sentence case for user interface buttons, menus, and notification modals.
-* Complete Privacy for Draft Manuscripts: Authors, journalists, and corporate copywriters can format draft articles, book manuscripts, and confidential press releases locally in browser memory with zero third-party tracking."""
+* Whitespace Normalization & Line Deduplication: When cleaning email marketing contact lists, server log files, or database exports, duplicate entries and inconsistent indentation degrade data hygiene. Toolora's text engine parses lines, strips trailing whitespaces, collapses redundant carriage returns, and deduplicates records in a single click with $O(N)$ hash-set efficiency.
+* Algorithmic URL Slug Generation (Slugification): Search engines mandate clean, crawlable, and semantic URL paths. Toolora transforms raw article titles and product names into clean kebab-cased slugs (e.g., '10 Essential Tips for Web Performance!' -> '10-essential-tips-for-web-performance') by stripping non-alphanumeric punctuation, transliterating international diacritics (accents), and collapsing consecutive hyphens.
+* Text Diff Engine & Myers Shortest-Path Algorithm: Compare two versions of a document side-by-side. Toolora's visual diff engine highlights added, deleted, and modified tokens in real time, making code review and editorial proofreading effortless.
+* Total Confidentiality for Draft Manuscripts: Authors, journalists, and corporate copywriters can sanitize draft articles, book manuscripts, and confidential press releases locally in browser memory with zero third-party tracking."""
     },
     {
-        'id': 'case-converter-modes-and-batch-workflows',
-        'heading': 'Comprehensive Casing Taxonomy: UPPERCASE, lowercase, Title Case & Invert Case',
-        'content': """Versatile transformation modes for writers, copy editors, and students:
+        'id': 'text-case-transmutation-and-developer-utilities',
+        'heading': 'Developer & Editorial Workflows: Case Transmutation, JSON Formatting & Instant Clipboard Sync',
+        'content': """Versatile text transformations tailored for software developers, content creators, and digital marketers:
 
-1. Essential Transformation Profiles:
-   * UPPERCASE (ALL CAPS): Ideal for legal contract covenants and prominent display banners.
-   * lowercase: Standardizes text for file naming, URL slugs, and database queries.
-   * Title Case: Formats headlines, book chapters, and blog titles according to formal editorial guidelines.
-   * Sentence case: Capitalizes the first letter of each sentence, correcting accidental Caps Lock entries.
-   * aLtErNaTiNg cAsE: Playful mocking tone for social media commentary and memes.
-2. Real-Time Bidirectional Transformation: Text updates instantaneously as you type or paste into the editor.
-3. Word and Character Statistics: Displays live character counts, word counts, and reading time estimates alongside your formatted text.
-4. Slugification for Web Publishing: Cleanly transform article titles into URL-friendly kebab-cased slugs (e.g., '10 Tips for Better SEO' -> '10-tips-for-better-seo') with automatic stripping of diacritics and special punctuation.
-5. Invert Case Mode: Effortlessly reverse inverted casing caused by accidental typing while Caps Lock is enabled.
-6. Sovereign Local Privacy: Transform proprietary company announcements, book drafts, and private creative writing safely in your device's browser memory without external tracking."""
+1. Universal Case Conversion Profiles:
+   * UPPERCASE & lowercase: Rapidly standardize headlines, legal terms, or database queries.
+   * Title Case: Formats headlines, book chapters, and blog titles according to formal AP Stylebook and Chicago Manual of Style guidelines.
+   * Sentence case: Capitalizes the first letter of each sentence, correcting accidental Caps Lock entries automatically.
+2. Instant Real-Time Transformation: All metrics and transformations update instantaneously as you type or paste into the master editor.
+3. One-Click Copy to Clipboard: Copy sanitized strings or transformed outputs directly back into your code editor or content management system.
+4. Total Sovereign Privacy: Cleanse sensitive customer email lists, proprietary source code, and private creative writing safely in your device's browser memory without external server exposure."""
     }
 )
 
-# 6. CaseConverterProgrammingGuide.ts
+# 6. TextToolsCaseFormatterGuide.ts
 reg(
-    'CaseConverterProgrammingGuide.ts',
+    'TextToolsCaseFormatterGuide.ts',
     {
         'id': 'programming-naming-conventions-taxonomy',
         'heading': 'Software Architecture Taxonomy: camelCase, PascalCase, snake_case, kebab-case & SCREAMING_SNAKE',
@@ -234,22 +218,23 @@ reg(
         'heading': 'Cross-Stack Serialization: Bridging Python/SQL snake_case to JavaScript camelCase',
         'content': """Solving naming impedance mismatches in modern full-stack application development:
 
-* The Full-Stack Impedance Mismatch: A typical enterprise application queries a PostgreSQL database storing columns in snake_case (e.g., billing_address_line1), transmits records through a Python backend, and delivers JSON payloads to a React frontend expecting camelCase (e.g., billingAddressLine1). Manually renaming dozens of database fields introduces typos and maintenance overhead.
-* Automated Model & Type Generator Workflows: Toolora allows developers to paste database schema declarations, SQL dumps, or JSON keys and instantly convert them to TypeScript interfaces or Python Pydantic models in seconds.
-* CSS to CSS-in-JS Transpilation: Convert legacy CSS properties (e.g., background-color, border-radius) directly into React style objects (e.g., backgroundColor, borderRadius) with zero manual retyping.
-* Zero Cloud Exposure for Proprietary Codebases: Software source code, proprietary algorithms, and internal database schemas represent invaluable intellectual property. Toolora converts code identifiers 100% locally in browser RAM with zero external server exposure."""
+* The Full-Stack Impedance Mismatch: A typical enterprise application queries a PostgreSQL database storing columns in snake_case (e.g., billing_address_line1), transmits records through a Python backend, and delivers JSON payloads to a React frontend expecting camelCase (e.g., billingAddressLine1). Manually renaming dozens of database fields introduces typos, bugs, and maintenance overhead across agile development sprints.
+* Automated Model & Type Generator Workflows: Toolora allows developers to paste database schema declarations, SQL dumps, GraphQL schemas, or raw JSON keys and instantly convert them into strongly-typed TypeScript interfaces or Python Pydantic models in seconds.
+* CSS to CSS-in-JS Transpilation: Convert legacy CSS properties (e.g., background-color, border-radius, box-shadow) directly into React inline style objects or Emotion/Styled-Components properties (e.g., backgroundColor, borderRadius, boxShadow) with zero manual retyping.
+* Zero Cloud Exposure for Proprietary Codebases: Software source code, proprietary algorithms, patent-pending logic, and internal database schemas represent invaluable intellectual property. Toolora converts code identifiers 100% locally in browser RAM with zero external server exposure."""
     },
     {
         'id': 'developer-productivity-and-batch-refactoring',
         'heading': 'High-Speed Refactoring: Batch Identifier Conversion, Regex Safety & Clipboard Integration',
-        'content': """Accelerating day-to-day software development and code refactoring:
+        'content': """Accelerating day-to-day software development, terminal workflows, and code refactoring:
 
-1. Multi-Line Batch Processing: Paste hundreds of variable names or database column definitions at once and convert the entire collection to your target casing format simultaneously.
-2. Preserving Numeric Suffixes & Special Identifiers: Intelligently handles alphanumeric tokens (e.g., utf8Encoding, sha256Checksum, ipv6Address) without corrupting numbers or splitting technical acronyms inappropriately.
-3. Instant Copy to Clipboard: One-click copying allows you to paste converted identifiers directly back into your code editor (VS Code, IntelliJ, Sublime Text).
-4. Environment Variable Normalization: Effortlessly convert application configuration keys into uppercase screaming snake case (e.g., databaseUrl -> DATABASE_URL) for Docker and Kubernetes deployment manifests.
+1. Multi-Line Batch Processing: Paste hundreds of variable names or database column definitions at once and convert the entire collection to your target casing format simultaneously with zero manual editing.
+2. Preserving Numeric Suffixes & Special Identifiers: Intelligently handles alphanumeric tokens (e.g., utf8Encoding, sha256Checksum, ipv6Address, oauth2Token) without corrupting numbers or splitting technical acronyms inappropriately.
+3. Instant Copy to Clipboard: One-click copying allows you to paste converted identifiers directly back into your code editor (VS Code, IntelliJ IDEA, Neovim, Sublime Text).
+4. Environment Variable Normalization: Effortlessly convert application configuration keys into uppercase screaming snake case (e.g., databaseUrl -> DATABASE_URL) for Docker Compose files, Kubernetes ConfigMaps, and .env deployment manifests.
 5. Protobuf and gRPC Field Mapping: Bridge serialization discrepancies between protocol buffer field definitions and client-side SDK generator stubs in seconds.
-6. Total Sovereign Privacy: Refactor sensitive enterprise software codebases, proprietary API contracts, and internal configuration keys safely within local browser memory with zero network exposure."""
+6. Git Branch & Commit Formatting: Format git branch names into clean kebab-cased conventions (e.g., feature/user-auth-jwt-refresh) for clean repository history.
+7. Total Sovereign Privacy: Refactor sensitive enterprise software codebases, proprietary API contracts, and internal configuration keys safely within local browser memory with zero network exposure."""
     }
 )
 
@@ -263,6 +248,7 @@ for k, secs in RICH_UTILS.items():
 
 if failing:
     print("FAILING:", failing)
+    sys.exit(1)
 else:
     print(f"ALL {len(RICH_UTILS)} UTILITY ARTICLES PASS WITH >= 500 WORDS!")
     with open("scripts/rich_utils_articles.json", "w") as f:

@@ -676,13 +676,20 @@ export default function ToolRenderer({ toolId: propToolId }: ToolRendererProps =
 
       default:
         return (
-          <div className="py-16 text-center space-y-3">
-            <p className="text-sm font-bold text-slate-800 dark:text-zinc-200">
-              Tool "{activeToolId}" is being prepared
+          <div className="py-16 text-center space-y-4">
+            <p className="text-base font-bold text-slate-800 dark:text-zinc-200">
+              Tool "{activeToolId}" not found or being prepared
             </p>
-            <p className="text-xs text-slate-500 dark:text-zinc-400">
-              Please select one of the available tools from the catalog.
+            <p className="text-xs text-slate-500 dark:text-zinc-400 max-w-sm mx-auto">
+              Please choose one of the 30 free utilities available from our full on-device tools catalog.
             </p>
+            <Link
+              to="/"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white text-xs font-bold font-display cursor-pointer transition-colors shadow-xs"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              <span>Explore All Tools</span>
+            </Link>
           </div>
         );
     }

@@ -5,9 +5,9 @@
 //
 // SEO / AEO pass:
 //   - FAQPage + BlogPosting + BreadcrumbList + (optional) HowTo JSON-LD.
-//   - ComparisonTable — renders `section.table` as a real styled <table>.
-//   - StatBarChart — renders `section.chart` as a real horizontal bar chart.
-//   - InlineToolChip — renders `section.relatedToolId` as a small functional button.
+//   - ComparisonTable renders `section.table` as a real styled <table>.
+//   - StatBarChart renders `section.chart` as a real horizontal bar chart.
+//   - InlineToolChip renders `section.relatedToolId` as a small functional button.
 // ─────────────────────────────────────────────────────────────────────────────
 
 import React, {
@@ -538,7 +538,7 @@ export default function ArticleShell({
                   "{post.quote}"
                 </p>
                 <footer className="text-[11px] text-slate-400 dark:text-zinc-500 mt-2 not-italic">
-                  — {post.author}, {post.authorRole}
+                  {post.author}, {post.authorRole}
                 </footer>
               </blockquote>
             )}

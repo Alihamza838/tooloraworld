@@ -4,7 +4,7 @@ import { IMG } from "../utils";
 
 const ImageToPdfGuide: BlogPost = {
   id: "convert-jpg-png-to-pdf-free-online",
-  title: "Convert JPG & PNG Images to PDF Free Online — A4, Letter & Custom Page Layouts (2026)",
+  title: "Convert JPG & PNG Images to PDF Free Online A4, Letter & Custom Page Layouts (2026)",
   slug: "convert-jpg-png-to-pdf-free-online-a4-letter",
   excerpt: "Transform single or multiple photos, receipt snapshots, ID scans, and artwork into a professional, standardized PDF document with custom margins, orientations, and compression.",
   date: "August 02, 2026",
@@ -44,6 +44,40 @@ Toolora uses **Direct XObject Ingestion**:
 * For JPEGs: The compressed DCT-encoded stream is wrapped directly into a \`/Filter /DCTDecode\` PDF object with zero re-encoding.
 * For PNGs: The lossless Flate stream and alpha channel mask are preserved identically.
 * Result: 100% original image quality with sub-second execution speeds.`
+    }
+  ,
+    {
+      id: "image-to-pdf-conversion-mechanics",
+      heading: "Technical Mechanics of Converting Images to Standardized PDF Containers",
+      content: `Converting raster photos (JPEG, PNG, WebP, TIFF) into standardized PDF files is an essential document assembly process. A properly compiled PDF does not merely encapsulate image bytes; it structures them inside a valid ISO 32000-1 document container complete with accurate page geometries and resolution metadata.
+
+1. Direct Stream Injection vs Re-Encoding: Low-quality converters decode incoming JPEG files and recompress them, causing generational quality loss and artificial compression artifacts. Toolora's intelligent PDF compiler detects existing JPEG streams and performs direct binary injection into an /XObject /Subtype /Image dictionary with a native /DCTDecode filter. This preserves 100% of the original photograph's crispness with zero loss.
+2. Page Geometry & Aspect Ratio Scaling:
+   * Auto-Fit to Standard Paper Sizes (Letter, A4, Legal): Computes scaling factors to center the image within standard page margins without cropping or distortion.
+   * Fit to Image Dimensions: Creates a custom page /MediaBox matching the exact pixel aspect ratio of the input photograph, ideal for artwork, receipts, and panoramic scans.
+3. Resolution & DPI Calibration: Digital cameras and smartphones capture images at 72 DPI with massive pixel dimensions. Toolora maps pixel densities to standard 300 DPI document space (1 pt = 1/72 in), ensuring that prints match physical expectations.`
+    },
+    {
+      id: "receipt-and-document-archiving",
+      heading: "Expense Reporting, Multi-Page Scans & Sovereign Archival Best Practices",
+      content: `Image-to-PDF conversion is a cornerstone workflow for business administration and legal archiving:
+
+* Expense Receipts & Tax Documentation: Smartphone photos of fuel receipts, meal vouchers, and travel invoices can be compiled into a single unified multi-page PDF expense report, streamlining reimbursement for accounting departments.
+* Digitizing Physical Paperwork: Snap photos of multi-page paper agreements, lease contracts, or handwritten study notes and compile them into an indexed, permanent PDF archive.
+* Optimizing File Size for Email: High-resolution smartphone cameras produce 5MB–10MB photos. Toolora's integrated downsampling allows users to balance file weight against visual legibility, producing compact PDFs ready for email transmission.
+* Uncompromising Privacy for Personal Records: Personal receipts, passport copies, and tax documents contain sensitive financial and identity data. Compiling PDFs locally in browser RAM ensures your sensitive documents never touch external cloud servers.`
+    },
+    {
+      id: "image-to-pdf-batch-ordering-and-margins",
+      heading: "Batch Page Ordering, Custom Margin Calibration & Orientation Alignment",
+      content: `Structuring clean multi-page document packets from mixed smartphone photo uploads requires flexible layout controls:
+
+1. Drag-and-Drop Page Sequencing: Smartphone photo uploads frequently have haphazard chronological order. Toolora's visual thumbnail strip enables users to effortlessly drag and drop pages into perfect reading sequence before compiling.
+2. Custom Margin Framing: Select between borderless full-bleed presentation (ideal for photographs and posters) or standardized 0.5-inch margins (essential for printable reports, homework assignments, and tax filings).
+3. Automatic Orientation Normalization: Mixed portrait receipts and landscape spreadsheets are automatically detected, orienting each page according to its individual aspect ratio.
+4. Total Client Data Sovereignty: Sensitive identification cards, driver's licenses, and financial records remain 100% private in local browser memory without uploading to unknown web servers.
+
+5. Resolution-Preserving Direct Stream Injection: Unlike naive image-to-PDF converters that decompress and re-encode incoming raster images—introducing generational loss and blurring fine text—Toolora performs direct binary injection. It wraps existing JPEG and PNG byte streams directly into PDF image XObjects, preserving 100% of original camera sensor sharpness while compiling the document in milliseconds.`
     }
   ],
   quiz: {

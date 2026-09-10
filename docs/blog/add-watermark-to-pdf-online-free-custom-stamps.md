@@ -1,6 +1,6 @@
 ---
 id: "add-watermark-to-pdf-online-free"
-title: "Add Watermark to PDF Online Free — Custom Text, Logos, Opacity & Angles (2026)"
+title: "Add Watermark to PDF Online Free Custom Text, Logos, Opacity & Angles (2026)"
 slug: "add-watermark-to-pdf-online-free-custom-stamps"
 category: "PDF Tools"
 readTime: "15 min read"
@@ -12,7 +12,7 @@ markdownTwin: "https://toolora.world/blog/add-watermark-to-pdf-online-free-custo
 toolId: "pdf-watermark"
 ---
 
-# Add Watermark to PDF Online Free — Custom Text, Logos, Opacity & Angles (2026)
+# Add Watermark to PDF Online Free Custom Text, Logos, Opacity & Angles (2026)
 
 *Published on July 20, 2026 | 15 min read | Author: Elena Rostova*
 

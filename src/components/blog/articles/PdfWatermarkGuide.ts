@@ -4,7 +4,7 @@ import { IMG } from "../utils";
 
 const PdfWatermarkGuide: BlogPost = {
   id: "add-watermark-to-pdf-online-free",
-  title: "Add Watermark to PDF Online Free — Custom Text, Logos, Opacity & Angles (2026)",
+  title: "Add Watermark to PDF Online Free Custom Text, Logos, Opacity & Angles (2026)",
   slug: "add-watermark-to-pdf-online-free-custom-stamps",
   excerpt: "Protect your intellectual property, invoices, and draft contracts. Stamp custom text watermarks ('CONFIDENTIAL', 'DRAFT', 'SAMPLE') or transparent corporate logos with precise angle and opacity controls.",
   date: "July 20, 2026",
