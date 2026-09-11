@@ -5,9 +5,9 @@
 //
 // SEO / AEO pass:
 //   - FAQPage + BlogPosting + BreadcrumbList + (optional) HowTo JSON-LD.
-//   - ComparisonTable renders `section.table` as a real styled <table>.
-//   - StatBarChart renders `section.chart` as a real horizontal bar chart.
-//   - InlineToolChip renders `section.relatedToolId` as a small functional button.
+//   - ComparisonTable - renders `section.table` as a real styled <table>.
+//   - StatBarChart - renders `section.chart` as a real horizontal bar chart.
+//   - InlineToolChip - renders `section.relatedToolId` as a small functional button.
 // ─────────────────────────────────────────────────────────────────────────────
 
 import React, {
@@ -42,54 +42,82 @@ import ArticleFaqAccordion from "./ArticleFaqAccordion";
 import type { ArticleComponentProps, BlogPost, ArticleSection } from "./types";
 import { ARTICLES } from "./articlesIndex";
 
-// ── Section image with IntersectionObserver lazy-load ───────────────────────
-const SectionImage = memo(({ src, alt }: { src: string; alt: string }) => {
-  const [loaded, setLoaded] = useState(false);
-  const [inView, setInView] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
+// ── Section image with IntersectionObserver lazy-load & Google Image SEO ─────
+const SectionImage = memo(
+  ({
+    src,
+    alt,
+    caption,
+  }: {
+    src: string;
+    alt: string;
+    caption?: string;
+  }) => {
+    const [loaded, setLoaded] = useState(false);
+    const [inView, setInView] = useState(false);
+    const ref = useRef<HTMLElement>(null);
 
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setInView(true);
-          obs.disconnect();
-        }
-      },
-      { rootMargin: "120px" },
+    useEffect(() => {
+      const el = ref.current;
+      if (!el) return;
+      const obs = new IntersectionObserver(
+        (entries) => {
+          if (entries[0].isIntersecting) {
+            setInView(true);
+            obs.disconnect();
+          }
+        },
+        { rootMargin: "140px" },
+      );
+      obs.observe(el);
+      return () => obs.disconnect();
+    }, []);
+
+    const safeAlt =
+      alt || "Technical workflow diagram and visual document processing guide";
+
+    return (
+      <figure
+        ref={ref}
+        role="group"
+        className="my-5 rounded-2xl overflow-hidden border border-slate-200/80 dark:border-zinc-800/80 bg-slate-50 dark:bg-zinc-900 shadow-2xs"
+      >
+        <div
+          className="relative w-full overflow-hidden"
+          style={{ aspectRatio: "16/8" }}
+        >
+          {!loaded && (
+            <div className="absolute inset-0 bg-slate-200/80 dark:bg-slate-800/80 animate-shimmer" />
+          )}
+          {inView && (
+            <img
+              src={src}
+              alt={safeAlt}
+              title={safeAlt}
+              loading="lazy"
+              decoding="async"
+              width={1200}
+              height={600}
+              itemProp="image"
+              onLoad={() => setLoaded(true)}
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+                loaded ? "opacity-100" : "opacity-0"
+              }`}
+            />
+          )}
+        </div>
+        {caption && (
+          <figcaption className="px-4 py-2 bg-slate-50/90 dark:bg-zinc-900/90 border-t border-slate-100 dark:border-zinc-800 text-[11px] text-slate-500 dark:text-zinc-400 flex items-center justify-between">
+            <span className="font-medium truncate pr-2">{caption}</span>
+            <span className="shrink-0 font-mono text-[10px] text-slate-400 dark:text-zinc-500 uppercase tracking-wider">
+              Toolora Guide Reference
+            </span>
+          </figcaption>
+        )}
+      </figure>
     );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
-
-  return (
-    <div
-      ref={ref}
-      className="relative w-full rounded-2xl overflow-hidden my-3 border border-slate-100 dark:border-zinc-800 bg-slate-50 dark:bg-zinc-900"
-      style={{ aspectRatio: "16/8" }}
-    >
-      {!loaded && (
-        <div className="absolute inset-0 bg-slate-200/80 dark:bg-slate-800/80 animate-shimmer" />
-      )}
-      {inView && (
-        <img
-          src={src}
-          alt={alt}
-          loading="lazy"
-          decoding="async"
-          width={1200}
-          height={600}
-          onLoad={() => setLoaded(true)}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
-            loaded ? "opacity-100" : "opacity-0"
-          }`}
-        />
-      )}
-    </div>
-  );
-});
+  },
+);
 SectionImage.displayName = "SectionImage";
 
 // ── Comparison Table ────────────────────────────────────────────────────────
@@ -451,7 +479,12 @@ export default function ArticleShell({
       <div className="relative w-full overflow-hidden" style={{ height: 280 }}>
         <img
           src={post.coverImage}
-          alt={post.title}
+          alt={
+            post.coverImageAlt ||
+            `${post.title} - Sovereign workflow and architecture guide`
+          }
+          title={post.title}
+          itemProp="image"
           loading="eager"
           fetchPriority="high"
           decoding="sync"
@@ -538,7 +571,7 @@ export default function ArticleShell({
                   "{post.quote}"
                 </p>
                 <footer className="text-[11px] text-slate-400 dark:text-zinc-500 mt-2 not-italic">
-                  {post.author}, {post.authorRole}
+                  - {post.author}, {post.authorRole}
                 </footer>
               </blockquote>
             )}
@@ -555,7 +588,14 @@ export default function ArticleShell({
                     {section.heading}
                   </h2>
                   {section.image && (
-                    <SectionImage src={section.image} alt={section.heading} />
+                    <SectionImage
+                      src={section.image}
+                      alt={
+                        section.imageAlt ||
+                        `${section.heading} - Technical architecture and workflow guide`
+                      }
+                      caption={section.imageCaption || section.heading}
+                    />
                   )}
                   <MarkdownText
                     content={section.content}
@@ -782,7 +822,7 @@ export default function ArticleShell({
 
             <MoreGuidesWidget
               currentId={post.id}
-              onNavigate={onNavigateArticle}
+              onNavigate={onNavigateArticle ?? (() => undefined)}
             />
           </div>
         </div>
@@ -800,7 +840,7 @@ const MoreGuidesWidget = memo(
     onNavigate: (id: string) => void;
   }) => {
     const others = useMemo(
-      () => ARTICLES.filter((a: BlogPost) => a.id !== currentId).slice(0, 5),
+      () => ARTICLES.filter((a) => a.id !== currentId).slice(0, 5),
       [currentId],
     );
 
@@ -820,6 +860,9 @@ const MoreGuidesWidget = memo(
               <img
                 src={a.coverImage}
                 alt={a.title}
+                title={a.title}
+                width={48}
+                height={40}
                 loading="lazy"
                 decoding="async"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"

@@ -10,7 +10,7 @@ export interface ArticleFAQ {
   a: string;
 }
 
-/** Structured comparison table — rendered as a real styled <table>, never as raw markdown pipes. */
+/** Structured comparison table - rendered as a real styled <table>, never as raw markdown pipes. */
 export interface ComparisonTableData {
   headers: string[];
   rows: string[][];
@@ -24,7 +24,7 @@ export interface ChartDataPoint {
   value: number;
 }
 
-/** Structured stat-chart — rendered as a real horizontal bar chart component. */
+/** Structured stat-chart - rendered as a real horizontal bar chart component. */
 export interface ChartData {
   title: string;
   unit?: string;
@@ -37,11 +37,13 @@ export interface ArticleSection {
   heading: string;
   content: string;
   image?: string;
+  imageAlt?: string;
+  imageCaption?: string;
   /** Optional structured comparison table shown after this section's text. */
   table?: ComparisonTableData;
   /** Optional structured chart shown after this section's text. */
   chart?: ChartData;
-  /** Optional real tool-id — renders a small functional "Try {tool}" chip wired to onOpenTool(). */
+  /** Optional real tool-id - renders a small functional "Try {tool}" chip wired to onOpenTool(). */
   relatedToolId?: string;
 }
 
@@ -76,6 +78,7 @@ export interface BlogPost {
   toolId?: string;
   relatedTools?: string[];
   coverImage: string;
+  coverImageAlt?: string;
   quiz: ArticleQuiz;
   faqs: ArticleFAQ[];
   /**

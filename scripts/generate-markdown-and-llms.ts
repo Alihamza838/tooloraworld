@@ -48,7 +48,7 @@ export function generateAllMarkdownAndLLMs() {
   for (const tool of TOOLS) {
     const pkg = generateSEOPackage(
       {
-        title: `${tool.name} — Free In-Browser Zero-Upload Tool`,
+        title: `${tool.name} - Free In-Browser Zero-Upload Tool`,
         description: tool.description,
         tags: [tool.category, 'client-side', 'zero-upload', 'privacy-first', 'webassembly', 'toolora'],
         category: tool.category,
@@ -76,7 +76,7 @@ export function generateAllMarkdownAndLLMs() {
 
     const fullToolMd = `---
 id: "${tool.id}"
-title: "${tool.name} — Free In-Browser Zero-Upload Tool"
+title: "${tool.name} - Free In-Browser Zero-Upload Tool"
 slug: "${tool.id}"
 category: "${tool.category}"
 description: "${tool.description}"
@@ -204,7 +204,7 @@ ${fm.howToSteps.map((step, idx) => `${idx + 1}. **${step.name}**: ${step.text}`)
 
 ## Peer-Reviewed Standards & Sources
 
-${fm.sources.map((s) => `- [${s.title}](${s.url}) — Published by ${s.publisher} (${s.doiOrStandard || 'Standard'}), Reliability: ${s.reliabilityScore}%`).join('\n')}
+${fm.sources.map((s) => `- [${s.title}](${s.url}) - Published by ${s.publisher} (${s.doiOrStandard || 'Standard'}), Reliability: ${s.reliabilityScore}%`).join('\n')}
 `;
 
     fs.writeFileSync(path.join(GUIDES_DOCS_DIR, `${fm.slug}.md`), mdContent, 'utf-8');
@@ -310,8 +310,18 @@ ${pkg.aeo.faq.map((f) => `### ${f.q}\n${f.a}`).join('\n\n')}
   fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap-blog.xml'), blogSitemapXml, 'utf-8');
 
   // Main Root Combined Sitemap
-  const rootSitemapEntries = [
+  const staticCoreRoutes = [
     { url: `${SITE_URL}/`, lastmod: today },
+    { url: `${SITE_URL}/about`, lastmod: today },
+    { url: `${SITE_URL}/contact`, lastmod: today },
+    { url: `${SITE_URL}/privacy`, lastmod: today },
+    { url: `${SITE_URL}/terms`, lastmod: today },
+    { url: `${SITE_URL}/blog`, lastmod: today },
+    { url: `${SITE_URL}/guides`, lastmod: today },
+  ];
+
+  const rootSitemapEntries = [
+    ...staticCoreRoutes,
     ...toolSitemapEntries,
     ...guidesSitemapEntries,
     ...blogSitemapEntries,

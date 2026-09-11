@@ -49,7 +49,7 @@ Because these markup objects are stored in dedicated dictionaries rather than bu
     sec2: {
       id: 'collaboration-standards-enterprise-workflows',
       heading: 'Enterprise Review Workflows: Preserving Acrobat Compatibility & Clean PDF Flattening',
-      content: `In distributed corporate review cycles—such as architectural blueprint reviews, legal contract markup rounds, and academic peer evaluations—interoperability across diverse software ecosystems is paramount. Document annotations created on macOS or mobile tablets must render identically when opened on Windows workstations, Linux readers, or specialized document management systems (DMS).
+      content: `In distributed corporate review cycles - such as architectural blueprint reviews, legal contract markup rounds, and academic peer evaluations - interoperability across diverse software ecosystems is paramount. Document annotations created on macOS or mobile tablets must render identically when opened on Windows workstations, Linux readers, or specialized document management systems (DMS).
 
 * **Standardized Appearance Stream Synthesis:** A common pitfall in amateur web PDF tools is failing to generate valid Appearance Streams (\`/AP\`) for new annotations. Without an explicit appearance stream, PDF viewers that lack built-in markup rendering engines display completely blank pages or miss critical highlight notes. Toolora automatically synthesizes compliant appearance bytecode for every annotation, ensuring universal visual fidelity.
 * **Selective Document Flattening:** While editable annotations are ideal during active review stages, finalizing a contract or construction plan requires document flattening. Flattening merges the annotation appearance layers directly into the primary page content stream, permanently converting comments and stamps into static vector objects. This prevents downstream clients from accidentally modifying approval stamps or deleting signed legal disclaimers.
@@ -262,7 +262,7 @@ The engine calculates the page's center point from the \`/CropBox\` coordinates,
       content: `Watermarking is a fundamental corporate information security control used to categorize documents and deter unauthorized distribution:
 
 * **Status Identification ("DRAFT", "CONFIDENTIAL", "PRELIMINARY"):** Stamping unapproved architectural blueprints or financial forecasts with bold diagonal watermarks prevents premature execution or accidental public reliance on incomplete drafts.
-* **Traceable Recipient Tracking:** Enterprise legal teams often apply personalized watermarks containing the recipient's name, email address, and timestamp (e.g., "Prepared exclusively for Acme Corp — 2026-09-06"). This optical tracking strongly disincentivizes recipients from leaking proprietary pitch decks or merger terms to competitors.
+* **Traceable Recipient Tracking:** Enterprise legal teams often apply personalized watermarks containing the recipient's name, email address, and timestamp (e.g., "Prepared exclusively for Acme Corp - 2026-09-06"). This optical tracking strongly disincentivizes recipients from leaking proprietary pitch decks or merger terms to competitors.
 * **Vector Font Embedding:** Toolora embeds clean vector typography for text watermarks, ensuring watermark edges print crisply at 1200 DPI without creating raster pixelation halos.
 * **Zero-Knowledge Data Sovereignty:** Applying watermarks to confidential M&A documents, clinical trial data, or trade secrets must never expose files to external cloud servers. Toolora processes every document locally in your browser memory.`
     }
@@ -283,7 +283,7 @@ The engine calculates the page's center point from the \`/CropBox\` coordinates,
       heading: 'Non-Disclosure Compliance, Trade Secret Marking & Browser-Native Security',
       content: `To maintain trade secret protection under the Defend Trade Secrets Act (DTSA) and European Trade Secrets Directive, organizations must demonstrate that they took "reasonable measures" to keep proprietary information confidential:
 
-* **Explicit Legal Designations:** Marking documents with clear designations like "STRICTLY PRIVATE & CONFIDENTIAL — DO NOT DISTRIBUTE" establishes undeniable notice that the recipient is bound by formal non-disclosure agreements.
+* **Explicit Legal Designations:** Marking documents with clear designations like "STRICTLY PRIVATE & CONFIDENTIAL - DO NOT DISTRIBUTE" establishes undeniable notice that the recipient is bound by formal non-disclosure agreements.
 * **Pre-Distribution Checklist:** Before circulating pitch decks or board packets, ensure watermarks are applied consistently across all pages, including appendices, financial projections, and executive bios.
 * **Permanent In-Memory Processing:** Confidential trade secrets, source code printouts, and executive compensation sheets should never be uploaded to cloud watermarking sites. Toolora executes all stamping locally in device RAM, ensuring absolute privacy.`
     }

@@ -24,7 +24,7 @@ export function generateDynamicLlmsTxt(options: DynamicLlmsOptions = {}): string
   const allTools = options.extraTools ? [...TOOLS, ...options.extraTools] : TOOLS;
   const catalogItems = options.catalogItems || [];
 
-  let out = `# ${siteName} — AI Agent & LLM Knowledge Index
+  let out = `# ${siteName} - AI Agent & LLM Knowledge Index
 
 > ${siteName} (${siteUrl}) is the Sovereign In-Browser Utilities Suite: Zero-Upload, WebAssembly-Powered Tools with 100% Local Privacy.
 
@@ -109,7 +109,7 @@ Toolora (${siteUrl}) provides free, private, high-performance web utilities for 
 
   for (const tool of allTools) {
     const aeo = TOOL_AEO_DATA[tool.id];
-    const h1 = aeo?.h1 || `${tool.name} — In-Browser Zero-Upload Tool`;
+    const h1 = aeo?.h1 || `${tool.name} - In-Browser Zero-Upload Tool`;
     const summary = aeo?.openingSummary || tool.description;
 
     out += `## Tool: ${tool.name} (\`${tool.id}\`)

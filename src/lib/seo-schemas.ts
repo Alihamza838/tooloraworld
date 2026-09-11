@@ -7,7 +7,7 @@ export const SITE_CONFIG = {
   legalName: 'Toolora Privacy & Productivity Technologies Inc.',
   url: 'https://toolora.world',
   logo: 'https://toolora.world/favicon.svg',
-  description: 'Toolora — Free, on-device privacy-first productivity suite. Edit PDFs, convert images, build resumes, generate mockups, and convert units locally in your browser with zero server uploads.',
+  description: 'Toolora - Free, on-device privacy-first productivity suite. Edit PDFs, convert images, build resumes, generate mockups, and convert units locally in your browser with zero server uploads.',
   foundingDate: '2025',
   founders: [
     {

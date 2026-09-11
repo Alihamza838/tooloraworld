@@ -6,7 +6,7 @@
  *
  * Drop this into any content/image/product upload pipeline.
  * Call generateSEOPackage(item, slug) once per item at publish time.
- * It returns everything you need — you just save the result to your DB
+ * It returns everything you need - you just save the result to your DB
  * and serve two routes (HTML + .md) from it.
  */
 
@@ -69,7 +69,7 @@ export function generateSlug(title: string): string {
     .slice(0, 80);
 }
 
-// checkExists(slug) => Promise<boolean> | boolean — tied to your DB or in-memory map
+// checkExists(slug) => Promise<boolean> | boolean - tied to your DB or in-memory map
 export async function generateUniqueSlug(
   title: string,
   checkExists: (slug: string) => Promise<boolean> | boolean
@@ -139,7 +139,7 @@ export function generateSEOPackage(item: SEOItemInput, slug?: string): SEOPackag
     : [];
 
   const aeo = {
-    quickAnswer: `${item.title} — ${item.description}`,
+    quickAnswer: `${item.title} - ${item.description}`,
     faq: customFaqs.length > 0 ? customFaqs : defaultFaqs,
   };
 
@@ -256,7 +256,7 @@ Sitemap: ${cleanSiteUrl}/sitemap.xml
 `.trim();
 };
 
-// ---------- 6. llms.txt TEMPLATE (site-wide map for AI agents — GEO requirement) ----------
+// ---------- 6. llms.txt TEMPLATE (site-wide map for AI agents - GEO requirement) ----------
 export const LLMS_TXT_TEMPLATE = ({ siteName, siteUrl, description, sections }: LlmsTxtParams): string => {
   const cleanSiteUrl = siteUrl.replace(/\/+$/, '');
   let content = `

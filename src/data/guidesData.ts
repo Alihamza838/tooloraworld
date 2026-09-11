@@ -71,7 +71,7 @@ export const GUIDES: GuideArticle[] = [
         },
         {
           id: 'iso-color-spaces',
-          title: 'ISO 12640-4: Graphic technology — Prepress digital data exchange',
+          title: 'ISO 12640-4: Graphic technology - Prepress digital data exchange',
           publisher: 'International Organization for Standardization',
           url: 'https://www.iso.org/standard/52671.html',
           accessedDate: 'July 2026',
@@ -226,7 +226,7 @@ Always export your final mockups at 2x or 4x Retina scale to prevent artifacting
       sources: [
         {
           id: 'iso-32000-2',
-          title: 'Document management — Portable document format — Part 2: PDF 2.0',
+          title: 'Document management - Portable document format - Part 2: PDF 2.0',
           publisher: 'International Organization for Standardization',
           url: 'https://www.iso.org/standard/75839.html',
           accessedDate: 'August 2026',

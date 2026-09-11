@@ -2,8 +2,7 @@ import React, { createContext, useContext, useState, useEffect, useRef } from 'r
 import { useLocation } from 'react-router-dom';
 import confetti from 'canvas-confetti';
 import { AnimatePresence, motion } from 'motion/react';
-import Sparkles from 'lucide-react/dist/esm/icons/sparkles.js';
-import X from 'lucide-react/dist/esm/icons/x.js';
+import { Sparkles, X } from 'lucide-react';
 import { DownloadHistoryItem, Tool } from '../types';
 import { TOOLS, CATEGORIES } from '../data';
 import { ARTICLES } from '../components/blog/articlesIndex';
@@ -473,7 +472,7 @@ export function TooloraProvider({ children }: { children: React.ReactNode }) {
       ? ARTICLES.find((a) => a.slug === activeArticleId) || null 
       : null;
 
-    let pageTitle = SITE_CONFIG.name + ' — Free In-Browser Zero-Upload Privacy Tools';
+    let pageTitle = SITE_CONFIG.name + ' - Free In-Browser Zero-Upload Privacy Tools';
     let pageDesc = SITE_CONFIG.description;
     let canonicalUrl = SITE_CONFIG.url;
     let markdownUrl = `${SITE_CONFIG.url}/public/llms.txt`;
@@ -481,7 +480,7 @@ export function TooloraProvider({ children }: { children: React.ReactNode }) {
     let ogImage = `${SITE_CONFIG.url}/favicon.svg`;
 
     if (currentTool) {
-      pageTitle = `${currentTool.name} — Free In-Browser Zero-Upload Tool | Toolora`;
+      pageTitle = `${currentTool.name} - Free In-Browser Zero-Upload Tool | Toolora`;
       pageDesc = `${currentTool.name}: ${currentTool.description} 100% private, client-side browser processing with zero cloud uploads.`;
       canonicalUrl = `${SITE_CONFIG.url}/tools/${currentTool.id}`;
       markdownUrl = `${SITE_CONFIG.url}/docs/tools/${currentTool.id}.md`;
@@ -520,7 +519,7 @@ export function TooloraProvider({ children }: { children: React.ReactNode }) {
     } else if (selectedCategory && selectedCategory !== 'all') {
       const cat = CATEGORIES.find((c) => c.id === selectedCategory);
       if (cat) {
-        pageTitle = `${cat.name} — Free In-Browser Zero-Upload Tools | Toolora`;
+        pageTitle = `${cat.name} - Free In-Browser Zero-Upload Tools | Toolora`;
         pageDesc = `${cat.description} 100% private, on-device execution.`;
         canonicalUrl = `${SITE_CONFIG.url}/tools/${cat.id}`;
       }

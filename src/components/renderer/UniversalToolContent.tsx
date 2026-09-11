@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import { TOOLS } from '../../data';
 import { TOOL_AEO_DATA } from '../../data/toolAeoData';
+import { PDF_EXTENDED_TOOL_DATA } from '../../data/pdfToolsExtendedContent';
 
 interface UniversalToolContentProps {
   toolId: string;
@@ -234,7 +235,7 @@ const UNIVERSAL_TOOL_DATA: Record<string, ToolContentData> = {
     ]
   },
   'resume-cv-builder': {
-    title: 'ATS-Optimized Resume & CV Studio — 2026 Hiring Standard',
+    title: 'ATS-Optimized Resume & CV Studio - 2026 Hiring Standard',
     badge: 'Applicant Tracking System (ATS) Compliant Engine',
     description: 'Craft high-impact tech, executive, academic, and creative resumes designed with live ATS keyword compatibility scoring, 10 industry layouts, and 100% private browser rendering.',
     sections: [
@@ -975,21 +976,24 @@ const UNIVERSAL_TOOL_DATA: Record<string, ToolContentData> = {
 export default function UniversalToolContent({ toolId }: UniversalToolContentProps) {
   const currentTool = TOOLS.find((t) => t.id === toolId);
   const aeo = TOOL_AEO_DATA[toolId];
-  const bespoke = UNIVERSAL_TOOL_DATA[toolId];
+  const bespoke = PDF_EXTENDED_TOOL_DATA[toolId] || UNIVERSAL_TOOL_DATA[toolId];
 
-  // Merge AEO FAQs (4-6 verified items) with any existing bespoke FAQs
-  const combinedFaqs = aeo?.faqs 
-    ? aeo.faqs.map(f => ({ q: f.question, a: f.answer }))
-    : (bespoke?.faqs || [
-        {
-          q: `Is ${currentTool?.name || 'this tool'} completely free to use?`,
-          a: 'Yes. All features are 100% free with no hidden charges, subscriptions, or watermarks.'
-        },
-        {
-          q: 'Are my files uploaded or saved anywhere?',
-          a: 'No. All operations run directly in your browser memory and are cleared when you close the tab.'
-        }
-      ]);
+  // Merge AEO FAQs with bespoke FAQs to provide full coverage
+  const combinedFaqs = [
+    ...(aeo?.faqs ? aeo.faqs.map(f => ({ q: f.question, a: f.answer })) : []),
+    ...(bespoke?.faqs || [])
+  ].filter((faq, idx, arr) => arr.findIndex(f => f.q.toLowerCase() === faq.q.toLowerCase()) === idx);
+
+  const finalFaqs = combinedFaqs.length > 0 ? combinedFaqs : [
+    {
+      q: `Is ${currentTool?.name || 'this tool'} completely free to use?`,
+      a: 'Yes. All features are 100% free with no hidden charges, subscriptions, or watermarks.'
+    },
+    {
+      q: 'Are my files uploaded or saved anywhere?',
+      a: 'No. All operations run directly in your browser memory and are cleared when you close the tab.'
+    }
+  ];
 
   const data = {
     title: aeo?.h1 || bespoke?.title || `Comprehensive Guide & Specifications: ${currentTool?.name || 'Tool'}`,
@@ -1026,7 +1030,7 @@ export default function UniversalToolContent({ toolId }: UniversalToolContentPro
       { feature: 'Pricing / Paywalls', toolora: '100% Free Forever', traditional: 'Subscriptions and credit limits' },
       { feature: 'Privacy Guarantee', toolora: 'Mathematically guaranteed', traditional: 'Subject to privacy policy changes' }
     ],
-    faqs: combinedFaqs
+    faqs: finalFaqs
   };
 
   const [openFaq, setOpenFaq] = useState<number | null>(null);

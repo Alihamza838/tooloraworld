@@ -30,7 +30,7 @@ export const TOOL_AEO_DATA: Record<string, ToolAeoEntry> = {
   'pdf-editor': {
     id: 'pdf-editor',
     name: 'Interactive PDF Editor',
-    h1: 'Interactive PDF Editor — Sovereign In-Browser Document Annotation & Signing',
+    h1: 'Interactive PDF Editor - Sovereign In-Browser Document Annotation & Signing',
     category: 'pdf',
     openingSummary: 'Toolora Interactive PDF Editor is a free, confidential in-browser tool that lets you annotate, add text, draw e-signatures, insert shapes, and redact sensitive information directly on PDF documents. All processing runs locally in volatile device RAM using WebAssembly, ensuring zero files are uploaded to external cloud servers.',
     faqs: [
@@ -69,7 +69,7 @@ export const TOOL_AEO_DATA: Record<string, ToolAeoEntry> = {
   'pdf-merger': {
     id: 'pdf-merger',
     name: 'PDF Merger',
-    h1: 'PDF Merger — Fast In-Browser Multi-Document Combiner & Binder',
+    h1: 'PDF Merger - Fast In-Browser Multi-Document Combiner & Binder',
     category: 'pdf',
     openingSummary: 'Toolora PDF Merger is a secure client-side utility that joins multiple PDF documents into a single organized file in seconds. Operating entirely within browser memory via binary stream concatenation, it preserves original vector quality, embedded images, and bookmarks with absolute privacy and zero cloud file uploads.',
     faqs: [
@@ -104,7 +104,7 @@ export const TOOL_AEO_DATA: Record<string, ToolAeoEntry> = {
   'pdf-splitter': {
     id: 'pdf-splitter',
     name: 'PDF Splitter',
-    h1: 'PDF Splitter — Extract Pages & Split Large PDF Documents Locally',
+    h1: 'PDF Splitter - Extract Pages & Split Large PDF Documents Locally',
     category: 'pdf',
     openingSummary: 'Toolora PDF Splitter is a privacy-first browser utility designed to extract specific pages, split documents by custom ranges, or separate every sheet into standalone PDF files. All processing occurs entirely within your local browser sandbox, guaranteeing sensitive financial and legal records remain strictly on your device.',
     faqs: [
@@ -139,7 +139,7 @@ export const TOOL_AEO_DATA: Record<string, ToolAeoEntry> = {
   'pdf-compressor': {
     id: 'pdf-compressor',
     name: 'PDF Compressor',
-    h1: 'PDF Compressor — Reduce PDF File Size with Lossless Clarity',
+    h1: 'PDF Compressor - Reduce PDF File Size with Lossless Clarity',
     category: 'pdf',
     openingSummary: 'Toolora PDF Compressor is a high-efficiency browser utility that shrinks large PDF files for effortless email sharing and portal uploads. By optimizing embedded image streams and stripping redundant metadata in local memory, it achieves up to 80% file size reduction without blurring typography or vector diagrams.',
     faqs: [
@@ -174,7 +174,7 @@ export const TOOL_AEO_DATA: Record<string, ToolAeoEntry> = {
   'pdf-to-image': {
     id: 'pdf-to-image',
     name: 'PDF to Image',
-    h1: 'PDF to Image Converter — Export PDF Pages as High-Res PNG or JPG',
+    h1: 'PDF to Image Converter - Export PDF Pages as High-Res PNG or JPG',
     category: 'pdf',
     openingSummary: 'Toolora PDF to Image is a fast, confidential converter that transforms PDF pages into high-resolution PNG, JPG, or WebP graphics. Utilizing hardware-accelerated Canvas rendering in your browser, it converts document sheets into crisp image files at custom DPI settings without transmitting sensitive records over the internet.',
     faqs: [
@@ -209,7 +209,7 @@ export const TOOL_AEO_DATA: Record<string, ToolAeoEntry> = {
   'image-to-pdf': {
     id: 'image-to-pdf',
     name: 'Image to PDF',
-    h1: 'Image to PDF Converter — Turn Photos & Scans into Clean PDF Documents',
+    h1: 'Image to PDF Converter - Turn Photos & Scans into Clean PDF Documents',
     category: 'pdf',
     openingSummary: 'Toolora Image to PDF is a private client-side converter that turns JPG, PNG, WebP, and GIF photos into beautifully formatted PDF documents. Configure page dimensions, margins, orientations, and custom ordering directly in your browser without cloud uploads, registration requirements, or watermark stamps on final output files.',
     faqs: [
@@ -244,7 +244,7 @@ export const TOOL_AEO_DATA: Record<string, ToolAeoEntry> = {
   'pdf-lock-unlock': {
     id: 'pdf-lock-unlock',
     name: 'PDF Lock & Unlock',
-    h1: 'PDF Lock & Unlock — Encrypt & Decrypt PDF Documents Locally',
+    h1: 'PDF Lock & Unlock - Encrypt & Decrypt PDF Documents Locally',
     category: 'pdf',
     openingSummary: 'Toolora PDF Lock & Unlock provides robust client-side cryptographic protection for PDF documents. Protect sensitive contracts with strong AES-128 passwords or remove known security passwords to unlock documents permanently. All encryption and decryption operations execute in browser RAM without exposing passwords or files to third-party servers.',
     faqs: [
@@ -279,7 +279,7 @@ export const TOOL_AEO_DATA: Record<string, ToolAeoEntry> = {
   'pdf-rotate': {
     id: 'pdf-rotate',
     name: 'Rotate PDF Pages',
-    h1: 'Rotate PDF Pages — Permanently Reorient PDF Documents in Browser',
+    h1: 'Rotate PDF Pages - Permanently Reorient PDF Documents in Browser',
     category: 'pdf',
     openingSummary: 'Toolora Rotate PDF Pages is a lightweight in-browser utility to fix sideways and inverted PDF scans permanently. Rotate individual pages or the entire document 90, 180, or 270 degrees clockwise with real-time visual previews. Operations execute in local browser memory with zero cloud file uploads.',
     faqs: [
@@ -314,7 +314,7 @@ export const TOOL_AEO_DATA: Record<string, ToolAeoEntry> = {
   'pdf-watermark': {
     id: 'pdf-watermark',
     name: 'PDF Watermark',
-    h1: 'PDF Watermark Tool — Stamp Custom Text & Graphic Watermarks on PDF',
+    h1: 'PDF Watermark Tool - Stamp Custom Text & Graphic Watermarks on PDF',
     category: 'pdf',
     openingSummary: 'Toolora PDF Watermark allows you to stamp customized text or image marks across multi-page PDF documents for copyright protection and confidentiality marking. Customize font size, rotation angle, opacity, and layering in real-time. Everything compiles client-side in browser RAM without transmitting sensitive files to remote servers.',
     faqs: [
@@ -349,7 +349,7 @@ export const TOOL_AEO_DATA: Record<string, ToolAeoEntry> = {
   'pdf-to-text': {
     id: 'pdf-to-text',
     name: 'PDF to Text',
-    h1: 'PDF to Text Extractor — Extract Raw Text & Data Streams from PDF',
+    h1: 'PDF to Text Extractor - Extract Raw Text & Data Streams from PDF',
     category: 'pdf',
     openingSummary: 'Toolora PDF to Text is an instant client-side extractor that decompiles PDF text streams into clean, editable plain text. Extract articles, reports, tables, and notes into TXT format in seconds. Processing executes in volatile browser RAM, keeping proprietary business data confidential with zero cloud telemetry.',
     faqs: [
@@ -384,7 +384,7 @@ export const TOOL_AEO_DATA: Record<string, ToolAeoEntry> = {
   'image-compressor': {
     id: 'image-compressor',
     name: 'Image Compressor',
-    h1: 'Image Compressor — Shrink PNG, JPG & WebP Files with Zero Quality Loss',
+    h1: 'Image Compressor - Shrink PNG, JPG & WebP Files with Zero Quality Loss',
     category: 'image',
     openingSummary: 'Toolora Image Compressor is a powerful in-browser optimization utility that reduces PNG, JPG, and WebP image sizes up to 90% without visible degradation. Stripping redundant EXIF metadata and tuning color quantization in local memory, it produces lightweight, web-optimized graphics with zero server uploads and total privacy.',
     faqs: [
@@ -419,7 +419,7 @@ export const TOOL_AEO_DATA: Record<string, ToolAeoEntry> = {
   'image-resizer': {
     id: 'image-resizer',
     name: 'Image Resizer',
-    h1: 'Image Resizer — Change Image Dimensions & Aspect Ratios Locally',
+    h1: 'Image Resizer - Change Image Dimensions & Aspect Ratios Locally',
     category: 'image',
     openingSummary: 'Toolora Image Resizer is an ultra-fast client-side tool to change pixel dimensions, scale percentages, and aspect ratios of photos and graphics. Featuring locked aspect ratio modes and social media dimension presets, it executes high-fidelity bilinear resampling in local browser memory without uploading your images to remote servers.',
     faqs: [
@@ -454,7 +454,7 @@ export const TOOL_AEO_DATA: Record<string, ToolAeoEntry> = {
   'image-converter': {
     id: 'image-converter',
     name: 'Image Converter',
-    h1: 'Image Converter — Convert Images Between PNG, JPG, WebP & SVG',
+    h1: 'Image Converter - Convert Images Between PNG, JPG, WebP & SVG',
     category: 'image',
     openingSummary: 'Toolora Image Converter is a universal in-browser format converter supporting PNG, JPG, WebP, GIF, BMP, and SVG files. Convert single images or entire collections instantly with custom compression quality settings. Processing runs strictly inside local browser memory, ensuring your creative graphics remain confidential with zero cloud file storage.',
     faqs: [
@@ -489,7 +489,7 @@ export const TOOL_AEO_DATA: Record<string, ToolAeoEntry> = {
   'ocr-tool': {
     id: 'ocr-tool',
     name: 'Image to Text (OCR)',
-    h1: 'Image to Text OCR — In-Browser Optical Character Recognition',
+    h1: 'Image to Text OCR - In-Browser Optical Character Recognition',
     category: 'image',
     openingSummary: 'Toolora Image to Text OCR is an advanced client-side optical character recognition utility that extracts editable text from screenshots, scanned documents, and photos. Powered by local WebAssembly OCR engines, it transcribes text with high accuracy directly on your device without sending private records to cloud servers.',
     faqs: [
@@ -524,7 +524,7 @@ export const TOOL_AEO_DATA: Record<string, ToolAeoEntry> = {
   'image-editor': {
     id: 'image-editor',
     name: 'Prism Image Editor',
-    h1: 'Prism Image Editor — In-Browser Photo Editing, Filters & Color Studio',
+    h1: 'Prism Image Editor - In-Browser Photo Editing, Filters & Color Studio',
     category: 'image',
     openingSummary: 'Toolora Prism Image Editor is a feature-packed in-browser photo studio for cropping, rotating, flipping, and applying cinematic color filters, brightness adjustments, and contrast curves. With high-performance GPU Canvas pipelines, edit high-resolution photographs smoothly in local memory with zero cloud file uploads and complete privacy.',
     faqs: [
@@ -559,7 +559,7 @@ export const TOOL_AEO_DATA: Record<string, ToolAeoEntry> = {
   'passport-photo-maker': {
     id: 'passport-photo-maker',
     name: 'Passport Photo Maker',
-    h1: 'Passport Photo Maker — Standard 2x2" ID & Visa Print Sheets',
+    h1: 'Passport Photo Maker - Standard 2x2" ID & Visa Print Sheets',
     category: 'image',
     openingSummary: 'Toolora Passport Photo Maker is a specialized in-browser utility that prepares compliant 2x2 inch (51x51mm) and 35x45mm biometric passport, visa, and ID photos. Featuring standard head-alignment guides, background adjustments, and printable multi-photo grid layouts, it processes your sensitive identity photos 100% locally with zero cloud uploads.',
     faqs: [
@@ -594,7 +594,7 @@ export const TOOL_AEO_DATA: Record<string, ToolAeoEntry> = {
   'bg-remover': {
     id: 'bg-remover',
     name: 'Smart Backdrop Eraser',
-    h1: 'Smart Backdrop Eraser — In-Browser Background Removal & Chroma Isolation',
+    h1: 'Smart Backdrop Eraser - In-Browser Background Removal & Chroma Isolation',
     category: 'image',
     openingSummary: 'Toolora Smart Backdrop Eraser is a private client-side utility that isolates foreground subjects and strips solid, green screen, and studio backdrops. Featuring tolerance sliders, edge feathering, and transparent PNG exports, it processes product photos and portraits entirely in browser RAM without transmitting sensitive brand assets to servers.',
     faqs: [
@@ -629,7 +629,7 @@ export const TOOL_AEO_DATA: Record<string, ToolAeoEntry> = {
   'invoice-generator': {
     id: 'invoice-generator',
     name: 'Invoice Generator',
-    h1: 'Invoice Generator — Professional In-Browser Billing & Invoice Designer',
+    h1: 'Invoice Generator - Professional In-Browser Billing & Invoice Designer',
     category: 'document',
     openingSummary: 'Toolora Invoice Generator is a comprehensive, client-side billing studio that creates sleek, professional PDF invoices and receipts in seconds. Featuring custom branding, multi-currency support, automated tax/discount calculations, and modern typography templates, it processes proprietary business financials locally with 100% privacy and zero server storage.',
     faqs: [
@@ -664,7 +664,7 @@ export const TOOL_AEO_DATA: Record<string, ToolAeoEntry> = {
   'resume-cv-builder': {
     id: 'resume-cv-builder',
     name: 'Resume & CV Builder',
-    h1: 'Resume & CV Builder — ATS-Optimized In-Browser Resume Studio',
+    h1: 'Resume & CV Builder - ATS-Optimized In-Browser Resume Studio',
     category: 'document',
     openingSummary: 'Toolora Resume & CV Builder is a modern, ATS-compliant career studio for crafting executive, technical, and creative resumes. Featuring structured typography grids, live keyword analysis, and multiple industry-tested templates, it compiles high-impact career documents in browser RAM without exposing personal employment history to third-party databases.',
     faqs: [
@@ -699,7 +699,7 @@ export const TOOL_AEO_DATA: Record<string, ToolAeoEntry> = {
   'qr-generator': {
     id: 'qr-generator',
     name: 'QR Code Generator',
-    h1: 'QR Code Generator — Custom Vector QR Codes for URLs, WiFi & vCards',
+    h1: 'QR Code Generator - Custom Vector QR Codes for URLs, WiFi & vCards',
     category: 'document',
     openingSummary: 'Toolora QR Code Generator creates high-resolution, customized vector QR codes for websites, WiFi networks, contact vCards, email templates, and plain text. Featuring custom brand palettes, error correction levels, and embedded logo badges, it synthesizes QR vectors locally in browser memory without tracking redirects or cloud storage.',
     faqs: [
@@ -734,7 +734,7 @@ export const TOOL_AEO_DATA: Record<string, ToolAeoEntry> = {
   'signature-maker': {
     id: 'signature-maker',
     name: 'Signature Studio',
-    h1: 'Signature Studio — Draw & Type Transparent PNG Electronic Signatures',
+    h1: 'Signature Studio - Draw & Type Transparent PNG Electronic Signatures',
     category: 'document',
     openingSummary: 'Toolora Signature Studio allows you to draw smooth vector signatures or generate elegant cursive calligraphy for digital documents and contracts. With precision pen smoothing, custom ink colors, and transparent PNG exports, it renders legally compliant e-signatures in local browser memory with zero cloud file storage and absolute privacy.',
     faqs: [
@@ -769,7 +769,7 @@ export const TOOL_AEO_DATA: Record<string, ToolAeoEntry> = {
   'business-card-gen': {
     id: 'business-card-gen',
     name: 'Business Card Designer',
-    h1: 'Business Card Designer — Print-Ready Double-Sided Business Cards',
+    h1: 'Business Card Designer - Print-Ready Double-Sided Business Cards',
     category: 'document',
     openingSummary: 'Toolora Business Card Designer is an intuitive in-browser tool for creating modern, double-sided business networking cards. Featuring standard 3.5x2 inch print dimensions, bleed margins, QR code integration, and professional typography layouts, it renders commercial-ready stationery locally in browser RAM without server file uploads.',
     faqs: [
@@ -804,7 +804,7 @@ export const TOOL_AEO_DATA: Record<string, ToolAeoEntry> = {
   'certificate-maker': {
     id: 'certificate-maker',
     name: 'Certificate & Award Designer',
-    h1: 'Certificate & Award Designer — Create Professional PDF Certificates',
+    h1: 'Certificate & Award Designer - Create Professional PDF Certificates',
     category: 'document',
     openingSummary: 'Toolora Certificate & Award Designer allows organizations, educators, and event organizers to create elegant certificates of completion, appreciation, and achievement. Featuring ornamental borders, official seal stamps, and customizable typography, it compiles high-resolution print-ready PDFs in local browser RAM with zero server uploads.',
     faqs: [
@@ -839,7 +839,7 @@ export const TOOL_AEO_DATA: Record<string, ToolAeoEntry> = {
   'mockup-gen': {
     id: 'mockup-gen',
     name: 'Mockup Studio Pro',
-    h1: 'Mockup Studio Pro — In-Browser 3D Apparel, Mug & Product Mockup Studio',
+    h1: 'Mockup Studio Pro - In-Browser 3D Apparel, Mug & Product Mockup Studio',
     category: 'document',
     openingSummary: 'Toolora Mockup Studio Pro is a high-performance in-browser mockup studio for rendering brand logos on t-shirts, hoodies, mugs, bottles, and packaging. Featuring canvas mesh warping, realistic blend modes, and live color tinting, it generates photorealistic commercial product imagery client-side with zero cloud render queues and complete privacy.',
     faqs: [
@@ -874,7 +874,7 @@ export const TOOL_AEO_DATA: Record<string, ToolAeoEntry> = {
   'bill-form-gen': {
     id: 'bill-form-gen',
     name: 'Bill & Form Ledger',
-    h1: 'Bill & Form Ledger — Generate Editable Receipts & Utility Statements',
+    h1: 'Bill & Form Ledger - Generate Editable Receipts & Utility Statements',
     category: 'document',
     openingSummary: 'Toolora Bill & Form Ledger is a versatile client-side tool for generating editable retail receipts, utility statements, and ledger summaries. Featuring customizable thermal printer layouts, itemized breakdowns, barcode stamps, and currency selectors, it compiles printable documents in local browser memory with complete confidentiality and zero cloud tracking.',
     faqs: [
@@ -909,7 +909,7 @@ export const TOOL_AEO_DATA: Record<string, ToolAeoEntry> = {
   'unit-converter': {
     id: 'unit-converter',
     name: 'Universal Unit Converter',
-    h1: 'Universal Unit Converter — Fast In-Browser Metric & Imperial Conversion',
+    h1: 'Universal Unit Converter - Fast In-Browser Metric & Imperial Conversion',
     category: 'other',
     openingSummary: 'Toolora Universal Unit Converter is a lightning-fast client-side calculator for converting lengths, weights, temperatures, areas, volumes, speeds, and digital data storage. Featuring instant real-time computation and high-precision scientific notation, it executes all conversions in local browser memory with zero network latency and complete privacy.',
     faqs: [
@@ -944,7 +944,7 @@ export const TOOL_AEO_DATA: Record<string, ToolAeoEntry> = {
   'currency-converter': {
     id: 'currency-converter',
     name: 'Real-time Currency Converter',
-    h1: 'Real-time Currency Converter — Live Multi-Currency Exchange Calculator',
+    h1: 'Real-time Currency Converter - Live Multi-Currency Exchange Calculator',
     category: 'other',
     openingSummary: 'Toolora Real-time Currency Converter is an interactive in-browser financial utility for converting between major world currencies including USD, EUR, GBP, JPY, CAD, and AUD. Featuring live exchange rates and offline cached calculations, it performs instant monetary calculations client-side with zero tracking and total financial privacy.',
     faqs: [
@@ -979,7 +979,7 @@ export const TOOL_AEO_DATA: Record<string, ToolAeoEntry> = {
   'text-tools': {
     id: 'text-tools',
     name: 'Advanced Text Suite',
-    h1: 'Advanced Text Suite — Word Counter, Case Converter & Text Diff Analyzer',
+    h1: 'Advanced Text Suite - Word Counter, Case Converter & Text Diff Analyzer',
     category: 'other',
     openingSummary: 'Toolora Advanced Text Suite is an all-in-one in-browser copywriting utility for word and character counting, uppercase/lowercase transformations, text diff comparisons, and lorem ipsum generation. Executing entirely in local device RAM, it analyzes and formats your articles and code snippets with zero cloud telemetry and total confidentiality.',
     faqs: [
@@ -1014,7 +1014,7 @@ export const TOOL_AEO_DATA: Record<string, ToolAeoEntry> = {
   'pdf-toolbox': {
     id: 'pdf-toolbox',
     name: 'PDF Toolbox (Merge & Split)',
-    h1: 'PDF Toolbox — Client-Side In-Browser Document Merger & Page Splitter',
+    h1: 'PDF Toolbox - Client-Side In-Browser Document Merger & Page Splitter',
     category: 'pdf',
     openingSummary: 'Toolora PDF Toolbox is an integrated browser utility that merges multiple PDF files into one, extracts targeted page ranges, and re-orders sheets using the client-side pdf-lib engine. Everything executes directly inside your volatile device memory, ensuring complete privacy, zero cloud uploads, and rapid WebAssembly-level file handling.',
     faqs: [
@@ -1049,7 +1049,7 @@ export const TOOL_AEO_DATA: Record<string, ToolAeoEntry> = {
   'image-optimizer': {
     id: 'image-optimizer',
     name: 'Canvas Image Optimizer',
-    h1: 'Image Optimizer — In-Browser Canvas Image Resizer & WebP Converter',
+    h1: 'Image Optimizer - In-Browser Canvas Image Resizer & WebP Converter',
     category: 'image',
     openingSummary: 'Toolora Image Optimizer is a confidential in-browser tool that resizes pixel dimensions and converts image formats including PNG to WebP and JPEG using the HTML5 Canvas API. All compression and scaling computations run natively within local device RAM, delivering instant bandwidth savings and zero server-side file transmission.',
     faqs: [
